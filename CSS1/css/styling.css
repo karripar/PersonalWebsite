@@ -1,6 +1,6 @@
 nav {
     margin: auto;
-    background-color: #577399;
+    background-color: #2C3E50;
     padding:0;
     display: flex;
     justify-content: flex-end;
@@ -9,7 +9,7 @@ nav {
 }
 
 .yellow {
-    color: chartreuse;
+    color: GOLD;
 }
 
 #forest {
@@ -63,17 +63,53 @@ html {
 
 
 .img_logo {
-    margin: auto;
-    display: flex;
+    margin-right: .5rem;
+    display: inline-flex;
     justify-content: flex-start;
     width: 80%;
+    position: relative;
+
+}
+
+#logo {
+    display: block;
+}
+
+.dropdown_menu {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.dropdown_menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown_menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.img_logo:hover .dropdown_menu {
+    opacity: 1;
+    max-height: 250px;
 }
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: #1ABC9C;
     text-align:center;
-    width: 10rem;
+    width: auto;
     margin: auto;
     font-weight: bold;
 }
@@ -118,8 +154,8 @@ a:hover {
 #home_figcaption {
     margin: auto;
     font-size: 20px;
-    color: #577399;
-    max-width: 80%;
+    color: #34495E;
+    max-width: 70%;
     max-height: 100%;
     width: auto;
     height: auto;
@@ -134,11 +170,11 @@ a:hover {
     margin: auto;
     justify-content: center;
     display: inline-block;
-    background-color: darkslateblue;
+    background-color: #2C3E50;
 }
 
 .home-section ul a {
-    color: aqua;
+    color: #1ABC9C;
 }
 
 .home-section ul a:hover {
@@ -174,7 +210,7 @@ header {
 article {
     margin: auto;
     display: flex;
-    color: #495867;
+    color: #34495E;
     text-align: center;
     flex-wrap: wrap;
     height: 100%;
@@ -186,7 +222,7 @@ main {
     display:flex;
     flex-wrap: wrap;
     margin:auto;
-    background-color: #F7F7FF;
+    background-color: #E0E6ED;
     width: 100%;
 }
 
@@ -207,7 +243,7 @@ figcaption {
 .product_overhead p {
     margin: auto;
     font-size: 18px;
-    color: #577399;
+    color: #34495E;
     max-width: 53%;
     max-height: 80%;
     width: auto;
@@ -218,7 +254,7 @@ figcaption {
 
 body {
     width: 100%;
-    background-color: #495867;
+    background-color: #ECF0F1;
 
 }
 
@@ -257,9 +293,24 @@ figure {
     padding: 1rem 1rem 5rem;
 }
 
-#ChaseTheRat:hover {
+#ChaseTheRat img {
+    transition: transform 0.3s ease;
+}
+
+#ChaseTheRat img:hover {
     opacity: 50%;
     cursor: pointer;
+    transform: scale(1.2);
+}
+
+#htmlRepo img{
+    transition: transform 0.3s ease;
+}
+
+#htmlRepo img:hover {
+    cursor: pointer;
+    opacity: 50%;
+    transform: scale(1.2);
 }
 
 
@@ -349,24 +400,5 @@ iframe {
 }
 
 @media screen and (min-width: 769px) {
-    .container {
-        width: 80%;
-    }
 
-    aside {
-        width: 20%;
-    }
-
-
-    article {
-        width: 100%;
-    }
-
-    li {
-        width: 10rem;
-    }
-
-    form {
-        width: 40%;
-    }
 }

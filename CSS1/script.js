@@ -1,7 +1,13 @@
 'use strict'
 
-const rat_image = document.getElementById("ChaseTheRat");
+const ratImage = document.getElementById("ChaseTheRat");
 
-rat_image.addEventListener('click', function() {
+ratImage.addEventListener('click', function() {
     window.location.href = 'https://github.com/lummila/projekti-2';
+})
+
+const htmlImage = document.getElementById("htmlRepo");
+
+htmlImage.addEventListener('click', function() {
+    window.location.href = 'https://github.com/karripartanen/PersonalWebsite';
 })
