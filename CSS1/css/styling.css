@@ -52,6 +52,7 @@ html {
     max-height: 100%;
     width: auto;
     height: auto;
+    overflow-x: hidden;
 }
 
 
@@ -74,6 +75,37 @@ html {
 #logo {
     display: block;
 }
+
+.sliding_text_container {
+    position: relative;
+    overflow: hidden;
+    height: 35px;
+    width: 400px; /* Adjust as needed */
+    margin: auto; /* Adjust as needed */
+    padding-left: 4rem;
+    border-radius: 15px;
+    background-color: #1ABC9C;
+    justify-content: center;
+}
+
+.sliding_text {
+    position: absolute;
+    white-space: nowrap;
+    animation: slide 10s linear infinite;
+    color: #E0E6ED;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
 
 .dropdown_menu {
     max-height: 0;
