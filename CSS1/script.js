@@ -9,7 +9,7 @@ ratImage.addEventListener('click', function() {
 const htmlImage = document.getElementById("htmlRepo");
 
 htmlImage.addEventListener('click', function() {
-    window.location.href = 'https://github.com/karripartanen/PersonalWebsite';
+    window.location.href = 'https://github.com/karripar/PersonalWebsite';
 });
 
 document.addEventListener('DOMContentLoaded', function() {
