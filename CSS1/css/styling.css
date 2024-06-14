@@ -1,6 +1,6 @@
 nav {
     margin: auto;
-    background-color: #2C3E50;
+    background-color: transparent;
     padding:0;
     display: flex;
     justify-content: flex-end;
@@ -49,10 +49,11 @@ nav {
 html {
     font-family: 'Roboto Condensed', 'Josefin Sans', sans-serif;
     max-width: 100%;
-    max-height: 100%;
+    height: fit-content;
     width: auto;
-    height: auto;
     overflow-x: hidden;
+    background: linear-gradient(135deg, #001F4D, #3F00FF, #001F4D);
+    color: white;
 }
 
 
@@ -70,10 +71,13 @@ html {
     width: 80%;
     position: relative;
 
+.
+
 }
 
-#logo {
+.logo {
     display: block;
+    border-bottom-right-radius: 10px;
 }
 
 .sliding_text_container {
@@ -82,10 +86,10 @@ html {
     height: 35px;
     width: 400px; /* Adjust as needed */
     margin: auto; /* Adjust as needed */
-    padding-left: 4rem;
     border-radius: 15px;
-    background-color: #1ABC9C;
+    background-color: transparent;
     justify-content: center;
+    border: 2px solid #E0E6ED;
 }
 
 .sliding_text {
@@ -118,6 +122,7 @@ html {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
     opacity: 0;
+    border-bottom-right-radius: 10px;
     transition: opacity 0.3s ease, max-height 0.3s ease;
 }
 
@@ -139,7 +144,7 @@ html {
 
 nav a {
     text-decoration: none;
-    color: #1ABC9C;
+    color: #E0E6ED;
     text-align:center;
     width: auto;
     margin: auto;
@@ -150,7 +155,7 @@ nav a {
 
 #HomeHead {
     font-size: 60px;
-    color: #495867;
+    color: #E0E6ED;
     max-width: 100%;
     max-height: 100%;
     width: auto;
@@ -188,7 +193,7 @@ a:hover {
 #home_figcaption {
     margin: auto;
     font-size: 20px;
-    color: #34495E;
+    color: #E0E6ED;
     max-width: 70%;
     max-height: 100%;
     width: auto;
@@ -222,7 +227,9 @@ a:hover {
 
 .product_overhead {
     margin: auto;
+    padding-top: 3rem;
     padding-bottom: 3rem;
+    max-width: 80%;
 }
 
 .product_overhead img {
@@ -239,6 +246,7 @@ header {
     width: 100%;
     margin:auto;
     text-align: center;
+    background-color: transparent;
 }
 
 article {
@@ -256,8 +264,9 @@ main {
     display:flex;
     flex-wrap: wrap;
     margin:auto;
-    background-color: #E0E6ED;
+    background-color: transparent;
     width: 100%;
+    height: 100%;
 }
 
 
@@ -277,7 +286,7 @@ figcaption {
 .product_overhead p {
     margin: auto;
     font-size: 18px;
-    color: #34495E;
+    color: #E0E6ED;
     max-width: 53%;
     max-height: 80%;
     width: auto;
@@ -288,7 +297,7 @@ figcaption {
 
 body {
     width: 100%;
-    background-color: #ECF0F1;
+    height: 100%;
 
 }
 
@@ -300,6 +309,7 @@ section {
     display:flex;
     justify-content: center;
 }
+
 .product_name {
     display: flex;
     justify-content: space-evenly;
@@ -322,9 +332,11 @@ figure {
 }
 
 .product-container {
-    display: flex;
+    display: inline-flex;
     margin: auto;
     padding: 1rem 1rem 5rem;
+    justify-content: space-evenly;
+    gap: 10px;
 }
 
 #ChaseTheRat img {
@@ -349,13 +361,13 @@ figure {
 
 
 .product-container section {
-    border: 2px solid #577399;
+    border: 2px solid #E0E6ED;
     border-radius: 5px;
     padding: .5rem .5rem 5rem;
     margin: auto;
     height: 27rem;
     width: calc(100% / 3);
-    background-color: #F7F7FF;
+    background-color: transparent;
     display: block;
     opacity: 0;
     transform: translateY(-50px);
@@ -380,7 +392,7 @@ figure {
     padding-bottom: 1rem;
     padding-top: 1rem;
     font-family: 'Josefin Sans', 'Roboto Condensed', sans-serif;
-    color: #495867;
+    color: #E0E6ED;
     font-style: normal;
 }
 
@@ -399,7 +411,7 @@ figure {
     font-size: 16px;
     width: 50%;
     padding-bottom: 5rem;
-    color: #495867;
+    color: #E0E6ED;
 }
 
 
