@@ -8,6 +8,12 @@ nav {
     width: 100%;
 }
 
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .yellow {
     color: GOLD;
 }
@@ -56,7 +62,10 @@ html {
     color: white;
 }
 
+.cv_list {
+    border: 4px solid #E0E6ED;
 
+}
 
 .cv_list li {
     color: #F7F7FF;
@@ -95,7 +104,7 @@ html {
 .sliding_text {
     position: absolute;
     white-space: nowrap;
-    animation: slide 10s linear infinite;
+    animation: slide 12s linear infinite;
     color: #E0E6ED;
 }
 
@@ -109,38 +118,59 @@ html {
 }
 
 
-
-
-.dropdown_menu {
-    max-height: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 100%;
+#menu-toggle {
+    position: fixed;
+    top: 50%;
     left: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 1;
-    opacity: 0;
-    border-bottom-right-radius: 10px;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
+    transform: translateY(-50%);
+    background-color: #E0E6ED;
+    color: #3F00FF;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    z-index: 3; /* Ensure it is above other elements */
+    transition: left 0.5s;
 }
 
+/* Dropdown menu styles */
+.dropdown_menu {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #012169;
+    overflow-x: hidden;
+    transition: width 0.5s;
+    z-index: 3;
+    opacity: 0.95;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
 .dropdown_menu a {
-    color: black;
     padding: 12px 16px;
     text-decoration: none;
+    font-size: 18px;
+    color: #E0E6ED;
     display: block;
+    transition: color 0.3s ease;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 .dropdown_menu a:hover {
-    background-color: #f1f1f1;
+    color: #3F00FF;
 }
 
-.img_logo:hover .dropdown_menu {
-    opacity: 1;
-    max-height: 350px;
-}
+
+
+
 
 nav a {
     text-decoration: none;
@@ -209,7 +239,7 @@ a:hover {
     margin: auto;
     justify-content: center;
     display: inline-block;
-    background-color: #2C3E50;
+    linear-gradient(135deg, #001F4D, #3F00FF, #001F4D);
 }
 
 .home-section ul a {
@@ -270,8 +300,6 @@ main {
 }
 
 
-
-
 main img {
     max-width: 80%;
     max-height: 80%;
@@ -293,12 +321,12 @@ figcaption {
     height: auto;
     display: flex;
     padding-top: .5rem;
+    font-weight: bold;
 }
 
 body {
     width: 100%;
     height: 100%;
-
 }
 
 section {
@@ -459,6 +487,3 @@ iframe {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (min-width: 769px) {
-
-}
