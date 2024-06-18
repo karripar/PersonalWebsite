@@ -87,6 +87,17 @@ html {
 .logo {
     display: block;
     border-bottom-right-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.6),  /* Outer glow */
+                0 0 40px rgba(0, 150, 255, 0.4),  /* Middle glow */
+                0 0 60px rgba(0, 150, 255, 0.2);  /* Inner glow */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.logo:hover {
+    box-shadow: 0 0 30px rgba(0, 150, 255, 0.8),  /* Outer glow on hover */
+                0 0 60px rgba(0, 150, 255, 0.6),  /* Middle glow on hover */
+                0 0 90px rgba(0, 150, 255, 0.4);  /* Inner glow on hover */
+    cursor: pointer;
 }
 
 .sliding_text_container {

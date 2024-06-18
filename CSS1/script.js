@@ -55,6 +55,10 @@ htmlImage.addEventListener('click', function() {
     window.location.href = 'https://github.com/karripar/PersonalWebsite';
 });
 
+const logo = document.querySelector('.logo')
+logo.addEventListener('click', function() {
+    window.location.href = 'index.html';
+});
 
 
 
