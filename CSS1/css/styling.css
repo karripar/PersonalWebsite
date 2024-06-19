@@ -498,3 +498,46 @@ iframe {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+.skills {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    padding-bottom: 4rem;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill h3 {
+    margin: 0 0 10px 0;
+    color: #FFFFFF; /* Strong white color for headings */
+}
+
+.skill-bar {
+    position: relative;
+    height: 30px;
+    background: #444444; /* Dark grey for better contrast */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #FF4500, #FFD700); /* Stronger gradient for the fill */
+    border-radius: 5px;
+    transition: width 1.5s ease-in-out;
+}
+
+.skill-percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: #FFFFFF; /* Strong white color for the percentage text */
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
