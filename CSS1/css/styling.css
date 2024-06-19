@@ -15,7 +15,7 @@ img {
 }
 
 .yellow {
-    color: GOLD;
+    color: gold;
 }
 
 #forest {
@@ -503,6 +503,7 @@ iframe {
     max-width: 600px;
     margin: auto;
     padding-bottom: 4rem;
+    display: block;
 }
 
 .skill {
@@ -525,9 +526,9 @@ iframe {
 .skill-bar-fill {
     height: 100%;
     width: 0;
-    background: linear-gradient(90deg, #FF4500, #FFD700); /* Stronger gradient for the fill */
+    background: linear-gradient(90deg, #FFA500, #FFFF00); /* Stronger gradient for the fill */
     border-radius: 5px;
-    transition: width 1.5s ease-in-out;
+    transition: width 2.5s ease-in-out;
 }
 
 .skill-percent {
@@ -541,3 +542,23 @@ iframe {
     transition: opacity 1.5s ease-in-out;
 }
 
+.cv-download {
+    display: inline-block;
+    padding-top: 3rem;
+}
+
+.cv_list {
+    padding: .5rem;
+    list-style-type: none;
+    border-radius: 10px;
+    font-weight: bold;
+    padding-inline: 1rem;
+}
+
+.openCV a {
+    color: #1ABC9C;
+}
+
+.openCV a:hover {
+    color: #3F00FF;
+}
