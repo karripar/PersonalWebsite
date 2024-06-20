@@ -86,6 +86,26 @@ document.querySelector('.dropdown_menu').
       event.stopPropagation();
     });
 
+// check the state of the old color toggle when switching pages
+window.addEventListener('DOMContentLoaded', (event) => {
+  const themeSwitcher = document.getElementById('theme-switcher');
+  if (localStorage.getItem('theme') === 'pink') {
+    document.documentElement.classList.add('pink-theme');
+    themeSwitcher.checked = true;
+  }
+});
+
+document.getElementById('theme-switcher').
+    addEventListener('change', function() {
+      if (this.checked) {
+        document.documentElement.classList.add('pink-theme');
+        localStorage.setItem('theme', 'pink');
+      } else {
+        document.documentElement.classList.remove('pink-theme');
+        localStorage.removeItem('theme');
+      }
+    });
+
 const ratImage = document.getElementById('ChaseTheRat');
 ratImage.addEventListener('click', function() {
   window.location.href = 'https://github.com/lummila/projekti-2';
