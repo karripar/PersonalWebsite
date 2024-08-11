@@ -19,11 +19,11 @@ img {
 }
 
 #forest {
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
     max-width: 100%;
     max-height: 100%;
     width: auto;
-    height: auto
+    height: auto;
 }
 
 
@@ -58,13 +58,29 @@ html {
     height: fit-content;
     width: auto;
     overflow-x: hidden;
-    background: linear-gradient(135deg, #001F4D, #3F00FF, #001F4D);
+    background: linear-gradient(135deg, #000000, #2c2c2c, #434343, #000000);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
     color: white;
     /* grey alternative --> linear-gradient(135deg, #2E2E2E, #B3B3B3, #2E2E2E);*/
     /* black alternative --> linear-gradient(135deg, #000000, #4D4D4D, #000000);*/
     /* pink alternative --> linear-gradient(135deg, #FF1493, #FFC0CB, #FF1493);*/
     /* light blue alternative --> linear-gradient(135deg, #3399FF, #99CCFF, #3399FF);*/
 }
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 .cv_list {
     border: 4px solid #E0E6ED;
@@ -155,7 +171,7 @@ html {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #012169;
+    background-color: #2c2c2c;
     overflow-x: hidden;
     transition: width 0.5s;
     z-index: 3;
@@ -180,7 +196,7 @@ html {
 }
 
 .dropdown_menu a:hover {
-    color: #3F00FF;
+    color: gold;
 }
 
 
@@ -243,7 +259,7 @@ a:hover {
     max-height: 100%;
     width: auto;
     height: auto;
-    padding-top: .5rem;
+    padding-top: 1rem;
     padding-bottom: 3rem;
 }
 
@@ -375,12 +391,46 @@ figure {
 }
 
 .product-container {
-    display: inline-flex;
+    display: flex;
     margin: auto;
     padding: 1rem 1rem 5rem;
-    justify-content: space-evenly;
     gap: 10px;
+    transition: transform 0.5s ease-in-out;
+    max-width: 80%;
+    position: relative;
+    justify-content: center;
 }
+
+.carousel-container {
+    overflow: hidden;
+}
+
+.product-container section {
+    min-width: calc(100% / 3); /* Display three sections at a time */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.left {
+    left: 80px;
+}
+
+.right {
+    right: 80px;
+}
+
+
 
 #ChaseTheRat img {
     transition: transform 0.3s ease;
@@ -506,7 +556,7 @@ iframe {
     width: 80%;
     max-width: 600px;
     margin: auto;
-    padding-bottom: 4rem;
+    padding-bottom: 7rem;
     display: block;
 }
 
@@ -627,9 +677,69 @@ html.pink-theme {
     width: auto;
     overflow-x: hidden;
     background: linear-gradient(135deg, #FF1493, #FFC0CB, #FF1493);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
     color: white;
     /* grey alternative --> linear-gradient(135deg, #2E2E2E, #B3B3B3, #2E2E2E);*/
     /* black alternative --> linear-gradient(135deg, #000000, #4D4D4D, #000000);*/
     /* pink alternative --> linear-gradient(135deg, #FF1493, #FFC0CB, #FF1493);*/
     /* light blue alternative --> linear-gradient(135deg, #3399FF, #99CCFF, #3399FF);*/
 }
+
+html.pink-theme .dropdown_menu{
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #C71585;
+    overflow-x: hidden;
+    transition: width 0.5s;
+    z-index: 3;
+    opacity: 0.95;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+html.pink-theme #menu-toggle {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #E0E6ED;
+    color: #C71585;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    z-index: 3; /* Ensure it is above other elements */
+    transition: left 0.5s;
+}
+
+html.pink-theme .dropdown_menu a:hover {
+    color: black;
+}
+
+html.pink-theme .logo {
+    display: block;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6),  /* Outer glow */
+                0 0 40px rgba(255, 255, 255, 0.4),  /* Middle glow */
+                0 0 60px rgba(255, 255, 255, 0.2);  /* Inner glow */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+html.pink-theme .logo:hover {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8),  /* Outer glow on hover */
+                0 0 60px rgba(255, 255, 255, 0.6),  /* Middle glow on hover */
+                0 0 90px rgba(255, 255, 255, 0.4);  /* Inner glow on hover */
+    cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+            nav {
+                max-width: 50%;
+            }
+        }
